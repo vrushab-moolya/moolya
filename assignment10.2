@@ -1,0 +1,9 @@
+from selenium.webdriver.common.by import By
+
+driver=webdriver.Chrome(executable_path='./drivers/chromedriver.exe')
+driver.get('https://www.saucedemo.com/checkout-step-one.html')
+
+driver.find_element(By.ID,'first-name').send_keys('vrushab')
+driver.find_element(By.ID,'last-name').send_keys('patil')
+driver.find_element(By.ID,'postal-code').send_keys('590006')
+driver.find_element(By.XPATH,"//input[@type='submit']").click()
